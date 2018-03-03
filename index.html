@@ -1,0 +1,90 @@
+<html lang="en"><head>
+        <meta charset="utf-8">
+        <title>Movie Ticketing</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+        <script src="C:\Users\CHRIS\Documents\form\javascript\form.js"></script>
+    </head>
+    <body>
+            <header>
+                    <p id="rightheader">
+                            <button onclick="window.close()">Exit Form</button>
+                        </p>
+                <p id = "leftheader">
+                Movie/Cinema Questionairre
+                </p>
+            
+            </header>
+            <br><br><br>
+            <form id="body" >
+            <p id="state">
+                Please enter your state of residence: <br>
+                <input type= "text" onchange="countryValidation()" id="country_field" list="country">
+                <datalist id="country">
+                    <option value="nigeria"></option>
+                    <option value="muritania"></option>
+                    <option value="england"></option>
+                    <option value="zimbabwe"></option>
+                    <option value="russia"></option>
+                </datalist>
+            </p>
+            <p id = "sex" style ="display:none">
+                Gender: <br>
+                <input type="radio" name = "gender" value="male" checked>Male <br>
+                <input type="radio" name = "gender" value="female" >Female 
+            </p>
+            <p id="age" style="display:none" >
+                    Please enter your age <br>
+                    <input type="number" id="age_field" onchange="ageValidation()">
+                </p>
+                <p id="cinema" style="display:none">
+                        Do you go to cinema or download? <br>
+                        <input type= "radio" onchange="cinemaValidation(value)" name="cinema" value="cinema" >Cinema <br>
+                        <input type= "radio" onchange="cinemaValidation(value)" name="cinema" value="download">Download <br>
+                    </p>
+                    <p id="rate_Cin" style="display:none">
+                            How would you rate the cinema standard in your area(Scale of 1 to 10) <br>
+                            <input type= "number" onchange="rateCinValidation()" id="rate_Cinfield">
+                        </p>
+                        <p id="Cin" style="display:none">
+                                Are there any cinemas in your vicinity <br>
+                                <input type= "radio" onchange="CinValidation(value)" name="decision" value="yes">Yes <br>
+                                <input type= "radio" onchange="CinVicValidation(value)" name="decision" value="no">No
+                            </p>
+                            <p id="free popcorn" style="display:none">
+                                    Do you ever get free popcorn <br>
+                                    <input type= "radio" onchange="End()" name="decision" value="yes"> Yes <br>
+                                    <input type= "radio" onchange="End()" name="decision" value="no">No
+                                </p>
+                                <p id="feel_public" style="display:none">
+                                        What do you feel about such movies <br>
+                                        <textarea onchange="End()" rows=3 cols="30"></textarea>
+                                    </p>
+                    <p id="occupation" style="display:none">
+                            Occupation <br>
+                            <input type= "text" onchange="occupationValidation()" id="occupation_field">
+                        </p>
+                        <p id="Movies" style="display:none">
+                              Which type of Movies do you like? <br>
+                                <input type= "radio" onchange="movieValidation(value)" value="action" name="mov_type">Action <br>
+                                <input type= "radio" onchange="movieValidation(value)" value="comedy" name="mov_type">Comedy <br>
+                                <input type= "radio" onchange="movieValidation(value)" value="romance" name="mov_type">Romance <br>
+                        </p>
+                       
+                                            <p id="retired" style="display:none">
+                                                    Any plans to visit the cinema during your retirement? <br>
+                                                    <input type= "radio" onchange="retirementValidation(value)" name="retirement" value="yes">Yes <br>
+                                                    <input type= "radio" onchange="retirementValidation(value)" name="retirement" value="no">No
+                                                </p>
+                                                <p id="rate" style="display:none">
+                                                        How would you rate the cinemas(Scale of 1 to 10) <br>
+                                                        <input type= "number" onchange="rateValidation()" id="rate_field">
+                                                    </p>
+                                                    <p id="rateMarv" style="display:none">
+                                                            How would you rate Marvel movies(Scale of 1 to 10) <br>
+                                                            <input type= "number" onchange="rateMarvValidation()" id="rateMarv_field">
+                                                        </p>
+        <p id="info" style="display:none">
+            </p>
+    </form>
+    </body>
+       
